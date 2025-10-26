@@ -1,24 +1,27 @@
 import requests
 import json
+import setup
 
 def retrive_right_now():
     """
     retrive_right_now(), pull latest data.
     """
     response = requests.get(
-        url='https://api.energidataservice.dk/dataset/PowerSystemRightNow?limit=5')
+        url= setup.data_query_link + r"/PowerSystemRightNow?limit=5")
 
     result = response.json()
     
-    for k, v in result.items():
-        print(k, v)
+    return result
 
-    records = result.get('records', [])
+def retrive_meta_dataset():
+    """
+    retrive_right_now(), pull latest data.
+    """
+    response = requests.get(
+        url= setup.data_query_link)
 
-    print('records:')
-    for record in records:
-        print(' ', record)
-
+    result = response.json()
+    
     return result
 
 def save_json_file(result, output_path):
