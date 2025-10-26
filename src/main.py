@@ -10,6 +10,7 @@ import setup
 import data_service_api
 import data_transform
 import data_packaging
+import convert_file_for_ML
 
 def main():
     if __name__ == '__main__':
@@ -32,6 +33,12 @@ def main():
             print(f"Data packaged for {average_dict.get("FirstMinute")}, waiting 60 seconds for API to refresh")
 
             time.sleep(60)
+
+    print("STARTING NORMALISING JSON DATA FOR ML")
+
+    MLReeadyDF = convert_file_for_ML.noramlise_json_data()
+
+    #TODO, feed in or further process dataframe (split to tokens). Need further specification of usecase.
 
     print("FINALIZED")
     
