@@ -149,6 +149,7 @@ venv.bak/
 
 # VS code settings
 launch.json
+settings.json
 
 # Spyder project settings
 .spyderproject

@@ -3,7 +3,7 @@
 debug = False
 save_file = False
 
-n_minutes = 2
+n_minutes = 1
 
 data_query_link = "https://api.energidataservice.dk/dataset"
 meta_data_query_link = "https://api.energidataservice.dk/meta"

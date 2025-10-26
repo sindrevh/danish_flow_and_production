@@ -37,7 +37,7 @@ def main():
     print("STARTING NORMALISING JSON DATA FOR ML")
 
     MLReeadyDF = convert_file_for_ML.noramlise_json_data()
-    convert_file_for_ML.save_normalised_df(MLReeadyDF, r"C:\git\danish_flow_and_production\output\output_time_series_file.pkl" )
+    convert_file_for_ML.save_normalized_df(MLReeadyDF, r"C:\git\danish_flow_and_production\output\output_time_series_file.pkl" )
 
     #TODO, feed in or further process dataframe (split to tokens). Need further specification of usecase.
 
